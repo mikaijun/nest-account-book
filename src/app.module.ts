@@ -3,8 +3,9 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TodoModule } from './todo/todo.module';
+// import { TodoModule } from './modules/todo.module';
 import { ApolloDriver } from '@nestjs/apollo';
+import { AccountBookModule } from './modules/account-book.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { ApolloDriver } from '@nestjs/apollo';
       // 生成されたschemaを自動でsortされるためのオプションをオンにする
       sortSchema: true,
     }),
-    TodoModule,
+    // TodoModule,
+    AccountBookModule,
   ],
   controllers: [AppController],
   providers: [AppService],
