@@ -21,8 +21,8 @@ export class AccountBookService {
   save(accountBookInput: AccountBookInput): AccountBook[] {
     const values = {
       id: '1',
-      title: accountBookInput.accountBookInput.title,
-      price: accountBookInput.accountBookInput.price,
+      title: accountBookInput.title,
+      price: accountBookInput.price,
       createdAt: new Date(),
       updatedAt: new Date(),
     };

@@ -10,13 +10,18 @@ type AccountBook {
   updatedAt: DateTime!
 }
 
+input AccountBookInput {
+  price: String!
+  title: String!
+}
+
 """
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
 scalar DateTime
 
 type Mutation {
-  save: [AccountBook!]!
+  save(accountBookInput: AccountBookInput!): [AccountBook!]!
 }
 
 type Query {

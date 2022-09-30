@@ -1,10 +1,10 @@
 import { Field, InputType } from '@nestjs/graphql';
 
-// @InputType()
+@InputType()
 export class AccountBookInput {
   @Field()
-  accountBookInput: {
-    title: string;
-    price: string;
-  };
+  title: string;
+
+  @Field()
+  price: string;
 }

@@ -7,7 +7,6 @@ import { AccountBookInput } from 'src/models/account-Book-input.models';
 export class AccountBookMutationResolver {
   constructor(private accountBookService: AccountBookService) {}
 
-  // Error: Undefined type error. Make sure you are providing an explicit type for the "accountBookInput" of the "AccountBookInput" class.
   @Mutation(() => [AccountBook])
   save(
     @Args({ name: 'accountBookInput', type: () => AccountBookInput })
