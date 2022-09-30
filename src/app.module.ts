@@ -3,7 +3,6 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-// import { TodoModule } from './modules/todo.module';
 import { ApolloDriver } from '@nestjs/apollo';
 import { AccountBookModule } from './modules/account-book.module';
 
@@ -16,7 +15,6 @@ import { AccountBookModule } from './modules/account-book.module';
       // 生成されたschemaを自動でsortされるためのオプションをオンにする
       sortSchema: true,
     }),
-    // TodoModule,
     AccountBookModule,
   ],
   controllers: [AppController],

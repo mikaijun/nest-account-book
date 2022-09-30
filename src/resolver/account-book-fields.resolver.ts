@@ -1,11 +1,9 @@
-import { AccountBookService } from './../services/account-book.service';
-import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { AccountBookService } from '../services/account-book.service';
+import { Args, ID, Query, Resolver } from '@nestjs/graphql';
 import { AccountBook } from '../models/account-book.models';
 
-// Resolverデコレータでresolverを定義
-// https://docs.nestjs.com/graphql/resolvers#code-first-resolver
-@Resolver('AccountBookResolver')
-export class AccountBookResolver {
+@Resolver('AccountBookFieldsResolver')
+export class AccountBookFieldsResolver {
   constructor(private accountBookService: AccountBookService) {}
   @Query(() => [AccountBook], { nullable: 'items' })
   findAll() {

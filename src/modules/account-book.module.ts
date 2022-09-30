@@ -1,9 +1,13 @@
 import { Module } from '@nestjs/common';
 import { AccountBookService } from '../services/account-book.service';
-import { AccountBookResolver } from './account-book.resolver';
-import { AccountBookResolver2 } from './account-book.resolver2';
+import { AccountBookFieldsResolver } from '../resolver/account-book-fields.resolver';
+import { AccountBookMutationResolver } from '../resolver/account-book-mutations.resolver';
 
 @Module({
-  providers: [AccountBookService, AccountBookResolver, AccountBookResolver2],
+  providers: [
+    AccountBookService,
+    AccountBookFieldsResolver,
+    AccountBookMutationResolver,
+  ],
 })
 export class AccountBookModule {}
